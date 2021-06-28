@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n# Read data ---------------------------------------------------------------\nlibrary( xlsx )\npath.annexin <- 'D:/1_Work/PROJECTS/Side_projects/FACS/Annexin_PI'\nfiles.annexin <- dir(path.annexin, all.files = F, full.names = T)\ntmp.info <- file.info(files.annexin)\n\nfiles.annexin[order(tmp.info$ctime)]\n\nlst.data <- list()\n\ntmp.data <- read.xlsx(files.annexin[order(tmp.info$ctime)][17], sheetIndex = 1, header = T, rowIndex = 7:31, colIndex = 1:8)\n",
+    "created" : 1533624739659.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3046450881",
+    "id" : "C962B498",
+    "lastKnownWriteTime" : 26740556585762921,
+    "last_content_update" : 1533629143628,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

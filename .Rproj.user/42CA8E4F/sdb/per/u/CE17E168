@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "if (require(\"nycflights13\")) {\n  carriers <- group_by(flights, carrier)\n  summarise(carriers, n())\n  mutate(carriers, n = n())\n  filter(carriers, n() < 100)\n}\nnasa[1]\n\nnear( x = 1, y = 1.0999999999999, tol = 0.1 ) \n\n\ntmp <- c(5, 1, 3, 2, 2, NA)\nrow_number(tmp)\nmin_rank(tmp)\ndense_rank(tmp)\npercent_rank(tmp)\ncume_dist(tmp)\nntile(tmp, 2)\nntile(runif(100), 10)\n# row_number can be used with single table verbs without specifying x\n# (for data frames and databases that support windowing)\nmutate(mtcars, row_number() == 1L)\nmtcars %>% filter(between(row_number(), 1, 10))\n\n\nlibrary(dplyr)\ndf %>% \n  group_by(ID) %>% \n  mutate(Code_n = make.unique(as.character(Code)))\n\nmake.unique(as.character( c(1,2,3,4,4,5,5,5,6,7,8,8,9))  )\n\ntmp <-\n  data.frame( x=c(2,2,3),\n        y=c(2,2,3),\n        z=c(2,2,3))\n\nmutate( tmp, newcol = dense_rank())\n\n\ntmp <- group_by(tib.cluster.info, exper_name, well_name, well_number )\nattributes(tmp)\n\nby_cyl <- group_by(mtcars, cyl)\ndo(by_cyl, head(., 2))\n\n\nmodels <- by_cyl %>% do(\n  mod_linear = lm(mpg ~ disp, data = .),\n  mod_quad = lm(mpg ~ poly(disp, 2), data = .)\n)\nmodels\ncompare <- models %>% do(aov = anova(.$mod_linear, .$mod_quad))\n# compare %>% summarise(p.value = aov$`Pr(>F)`)\n\n\ntmp <- sample(c(\"a\", \"b\", \"c\"), 10, replace = TRUE)\nrecode(tmp, a = \"Apple\")\n\n\ngroups(tmp)\n\n\ntmp <- as.data.frame( expand.grid(x = 1:3, y = 3:1) )\ntmp1 <- tmp %>% rowwise() %>% do(i = seq(.$x, .$y))\ntmp1$i\ntmp1 %>% summarise(n = length(i))\n\n\n################################### asdf\nlibrary(parallel)\\\n\nncores <- detectCores()-1\ncl <- makeCluster(ncores)\nclusterEvalQ(cl, library(c( 'tidyverse'\n                            ,'dplyr'\n                            ,'plotly'\n                            ,'rgl'\n                            ,'shiny'\n) \n))\nparLapply(cl, 1:10, function(x){\n  open3d()\n  return( data.frame(x = 1:x\n             , y = 1:x\n             ) )\n  \n})\n\nstopCluster(cl)\n",
+    "created" : 1537971097629.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "4139533563",
+    "id" : "CE17E168",
+    "lastKnownWriteTime" : 7596484193276666483,
+    "last_content_update" : 1537984136441,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "docOutlineVisible" : "0",
+        "tempName" : "Untitled4"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

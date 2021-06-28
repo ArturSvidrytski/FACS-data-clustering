@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538086287735.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A74D4EBC",
+    "lastKnownWriteTime" : 8532481202996862828,
+    "last_content_update" : 1538086287735,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "D7A2E041",
+        "caption" : "tib.cluster.info",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=tib.cluster.info&cache_key=D7A2E041",
+        "displayedObservations" : "144017",
+        "environment" : "",
+        "object" : "tib.cluster.info",
+        "preview" : "0",
+        "totalObservations" : "144017",
+        "variables" : "41"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
